@@ -1,4 +1,4 @@
-<h1>Sign up</h1>
+<h1>Edit</h1>
 
 <%= form_with(model: @user, local: true) do |f| %>  
   <%= f.label :name %>
@@ -7,10 +7,8 @@
   <%= f.label :email %>
   <%= f.email_field :email %>
 
-  <%= f.label :image %>
-  <%= image_tag(@user.image.url) if @user.image && @user.image.url %>
+  <%= f.label :avatar %>
   <%= f.file_field :image %>  
-  <%= f.hidden_field :image_cache %>
 
   <%= f.label :password %>
   <%= f.password_field :password %>

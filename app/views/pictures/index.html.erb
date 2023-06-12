@@ -19,7 +19,7 @@
         <td><%= picture.image %></td>
         <td><%= picture.title %></td>
         <td><%= picture.content %></td>
-        <td><%= picture.userr_id %></td>
+        <td><%= picture.user.name %></td>
         <td><%= link_to 'Show', picture %></td>
         <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
         <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
