@@ -4,6 +4,9 @@ Rails.application.routes.draw do
       post :confirm
     end
   end
+  resources :users, only: [:show] do
+    get :favorites, on: :collection
+  end
   resources :contacts
   resources :pictures
   resources :sessions, only: [:new, :create, :destroy]

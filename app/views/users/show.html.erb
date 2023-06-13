@@ -8,5 +8,11 @@
   <%= image_tag (@user.image.url) if @user.image && @user.image.url %>
 </p>
 <% end %>
+<% if @favorite_list.present? %>
+  <% @favorite_list.each do |item| %>
+    <%= picture.name %>
+    <%= image_tag picture.image%>
+    <% end %>
+<% end %>
 <%= link_to 'Edit', edit_user_path(@user) %> 
 <%= link_to 'Back', new_user_path %>  

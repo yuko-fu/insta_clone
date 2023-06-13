@@ -25,6 +25,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+
+    favorite_list = Picture.find(favorites_url)
   end
 
   def edit
