@@ -2,7 +2,7 @@ class FavoritesController < ApplicationController
   skip_before_action :login_required, only: [:new, :create]
 
   def index
-    @favorites = current_user.pictures
+    @favorites = current_user.favorites
   end
 
   def create

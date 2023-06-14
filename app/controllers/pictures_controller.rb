@@ -19,6 +19,11 @@ class PicturesController < ApplicationController
   end
 
   def edit
+    if @picture.user_id == current_user
+      redirect_to edit_picture_path(@picture)
+    else
+      redirect_to pictures_path
+    end
   end
 
   def create
