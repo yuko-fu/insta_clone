@@ -14,5 +14,6 @@
     <%= image_tag picture.image%>
     <% end %>
 <% end %>
+<%= link_to 'Index Favorite', favorites_path %>
 <%= link_to 'Edit', edit_user_path(@user) %> 
-<%= link_to 'Back', new_user_path %>  
+<%= link_to 'Back', pictures_path %>  

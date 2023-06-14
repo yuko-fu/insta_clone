@@ -1,8 +1,8 @@
 class FavoritesController < ApplicationController
   skip_before_action :login_required, only: [:new, :create]
 
-  def show
-  end
+  def index
+    @favorites = current_user.favorites
   end
 
   def create
