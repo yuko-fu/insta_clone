@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       post :confirm
     end
   end
+  root "properties#index"
   resources :contacts
   resources :pictures
   resources :sessions, only: [:new, :create, :destroy]
