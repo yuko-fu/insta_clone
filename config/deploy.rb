@@ -2,17 +2,17 @@
 lock '3.16.0'
 
 # デプロイするアプリケーション名
-set :application, 'アプリケーション名'
+set :application, 'insta_clone_app'
 
 # cloneするgitのレポジトリ
-# （xxxxxxxx：ユーザ名、yyyyyyyy：アプリケーション名）
+# （xxxxxxxx：ユーザ名、yyyyyyyy：insta_clone_app）
 set :repo_url, 'https://github.com/yuko-fu/insta_clone.git'
 
 # deployするブランチ。デフォルトでmainを使用している場合、masterをmainに変更してください。
 set :branch, ENV['BRANCH'] || 'master'
 
 # deploy先のディレクトリ。
-set :deploy_to, '/var/www/アプリケーション名'
+set :deploy_to, '/var/www/insta_clone_app'
 
 # シンボリックリンクをはるフォルダ・ファイル
 set :linked_files, %w{.env config/secrets.yml}
